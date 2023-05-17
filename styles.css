@@ -2,7 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
   }
   
   ul,
@@ -12,9 +12,9 @@
   
   body {
 	background-color: #161616;
-	border: 1px solid red;
-	color: #EEEEEE;
-	font-family: Arial, Helvetica, sans-serif;
+	/* border: 1px solid red; */
+	color: #161616;
+	font-family: 'Acumin Pro', sans-serif;
   }
   
   /* 共通 */
@@ -24,20 +24,63 @@
   }
   
   .common__container {
-	display: flex;
 	margin: 0 auto;
 	max-width: 900px;
 	width: 100%;
+	height: 100vh;
   }
 
-  .common__container footer {
+footer {
 	width: 100%;
-	height: 64px;
+	height: 100px;
 	background-color: #EEEEEE;
 	position: absolute;
 	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+
+footer .footerPGP {
+	font-family: 'Advent Pro', sans-serif;
+	font-size: 32px;
+	margin: 8px;
+  }
+
+footer .copyright {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 8px;
+	font-size: 12px;
+  }
+
+footer .snsArea {
+	margin: 0 32px 24px 8px;
+  }
+
+  .snsArea ul {
+	display: flex;
+  }
+
+  .snsArea li a {
+	display: flex;
+	flex-direction: row;
+  }
+
+  .snsArea li + li {
+	margin-left: 18px;
+  }
+
+  .snsArea li {
+	font-size: 24px;
+  }
+
+  .snsArea i {
 	color: #161616;
   }
+
+
   
   .common__title {
 	font-size: 88px;
@@ -49,13 +92,63 @@
 	color: #EEEEEE;
   }
   
-  /* アニメーションなしエリア */
+  /* PROFILEAREA */
   .empty__container {
-	height: 900px;
+	height: 100vh;
+	background-color: #EEEEEE;
+	position: relative;
+  }
+
+  .empty__container h1 {
+
+	font-family: 'Advent Pro', sans-serif;
+	font-weight: 200;
+	font-size: 82px;
+	padding: 8px;
+	display: block;
+  }
+
+  .empty__container h2 {
+
+	bottom: 0;
+	font-size: 18px;
+	white-space: nowrap;
+	/* margin: 18px; */
+  }
+
+  .empty__container h3 {
+	font-size: 14px;
+	white-space: nowrap;
+	margin-top: 18px;
+	margin-right: 18px;
+  }
+
+  .empty__container p {
+	/* overflow-wrap: break-word; */
+	font-size: 12px;
+	width: 24em;
+  }
+
+  .empty__container .profile__text {
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	margin: 48px 18px 72px 18px;
+  }
+
+  .empty__container h3 + p {
+	margin-left: 3em;
+  }
+
+  .empty__container img {
+	width: 48%;
+	display: block;
+	margin: auto;
   }
   
   /* GSAP ScrollTriggerエリア */
   .side-scroll__section {
+	/* border: 1px solid white; */
 	background-color: #161616;
 	display: flex;
 	align-items: center;
@@ -65,23 +158,54 @@
   
   .side-scroll__itemOuter {
 	position: relative;
-	height: 100vh;
-	width: 100%;
+	/* border: 1px solid yellow; */
+	/* width: 100%; */
 	
   }
   
   .side-scroll__itemInner {
+	/* border: 1px solid  skyblue; */
 	position: absolute;
-	top: 60px;
+	top: 92px;
 	left: 0;
 	display: flex;
 	/* gap: 0 60px; */
+  }
+
+  .side-scroll__itemInner .jobTitle {
+	position: fixed;
+	bottom: 0;
   }
   
   .side-scroll__item {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 70vh;
-	/* width: 100%; */
+	height: 72vh;
+	width: 100vw;
+	overflow: hidden;
+	object-fit: cover;
+	margin-right: 64px;
+
   }
+
+  .empty__container2 {
+	background-color: #F4FF70;
+	position: relative;
+	height: 100vh;
+  }
+
+  .empty__container2 h1 {
+	font-family: 'Advent Pro', sans-serif;
+	font-weight: 400;
+	font-size: 82px;
+	padding: 8px;
+	display: block;
+  }
+
+  .empty__container2 img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 64%;
+}
