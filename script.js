@@ -1,24 +1,22 @@
-// import { gsap } from "gsap";
 
-// gsap.registerPlugin(scrollTrigger, ScrollSmoother);
-
-{
-  const itemWrapper = document.querySelector('.side-scroll__itemOuter');
-  const itemInner = document.querySelector('.side-scroll__itemInner');
-
-  gsap.to(itemInner, {
-    x: () => -(itemInner.clientWidth - itemWrapper.clientWidth),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.side-scroll__section', 
-      start: 'top top',
-      end: () => `+=${itemInner.clientWidth - itemWrapper.clientWidth}`,
-      markers: true,
-      scrub: true, 
-      pin: true,  
-      invalidateOnRefresh: true, 
-      anticipatePin: 1, 
-    },
-  });
-}
-
+gsap.registerPlugin('ScrollTrigger');
+gsap.fromTo('.container',{scale:4},{scale:1,
+    scrollTrigger:{
+        trigger:'.center',
+        start:'center center',
+        scrub:1,
+        pin:'.container',
+        onEnter:()=>{
+            gsap.set('figure:not(.center)',{autoAlpha:1})
+            gsap.to('footer', {
+              autoAlpha: 0
+            })
+        },
+        onLeaveBack:()=>{
+            gsap.set('figure:not(.center)',{autoAlpha:0})
+            gsap.to('footer', {
+              autoAlpha: 1
+            })
+        },
+    }
+})
