@@ -1,6 +1,8 @@
 'use strict';
 {
-    const targets = document.querySelectorAll(".side-scroll__item")
+    const targets = document.getElementById("profile")
+    const text = new SplitType('#title')
+    gsap.registerPlugin('ScrollTrigger');
 
     console.log(targets)
     const options = {
@@ -10,8 +12,13 @@
     const callback = (entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                console.log("TEST")
-                console.log(targets)
+                gsap.to(".char", {
+                  y: 0,
+                  stagger: 0.05,
+                  delay: 0.2,
+                  duration: 0.4,
+                  ease: "power2.out",
+                })
             } else {
 
             };
@@ -20,9 +27,7 @@
 
     const observer = new IntersectionObserver(callback, options)
 
-    targets.forEach(target => {
-        observer.observe(target);
-    });
+    observer.observe(targets);
 }
 
 
