@@ -69,12 +69,12 @@ figure:nth-of-type(5){
     grid-row: 5/6;
 }
 figure:nth-of-type(6){
-    grid-column: 1/2;
-    grid-row: 3/4;
+    grid-column: 4/5;
+    grid-row: 3/5;
 }
 figure:nth-of-type(7){
-    grid-column: 4/5;
-    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-row: 3/5;
 }
 
 figure:not(.center){
@@ -150,7 +150,7 @@ figure:not(.center){
   .empty__container p {
 	/* overflow-wrap: break-word; */
 	font-size: 12px;
-	width: 24em;
+	width: 18em;
   }
 
   .empty__container .profile__text {
@@ -223,7 +223,8 @@ figure:not(.center){
 	font-weight: 400;
 	font-size: 82px;
 	padding: 8px;
-	display: block;
+	/* display: block; */
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   .empty__container2 img {
@@ -337,5 +338,32 @@ footer .snsArea {
     figure:not(.center){
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+.ityped-cursor {
+    font-size: 1em;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
     }
 }

@@ -1,7 +1,7 @@
 'use strict';
 {
     const targets = document.getElementById("profile")
-    const text = new SplitType('#title')
+    const text = new SplitType('h1')
     gsap.registerPlugin('ScrollTrigger');
 
     console.log(targets)
@@ -15,18 +15,16 @@
                 gsap.to(".char", {
                   y: 0,
                   stagger: 0.05,
-                  delay: 0.2,
+                  delay: 0.1,
                   duration: 0.4,
                   ease: "power2.out",
                 })
-            } else {
-
-            };
+            }
         });
     }
 
-    const observer = new IntersectionObserver(callback, options)
 
+    const observer = new IntersectionObserver(callback, options)
     observer.observe(targets);
 }
 

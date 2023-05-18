@@ -6,7 +6,7 @@
         start:'center center',
         scrub:1,
         pin:'.container',
-        markers: 1,
+        // markers: 1,
         onEnter:()=>{
             gsap.set('figure:not(.center)',{autoAlpha:1})
         },
@@ -15,8 +15,4 @@
         },
     }
   })
-}
-
-{
-
 }
