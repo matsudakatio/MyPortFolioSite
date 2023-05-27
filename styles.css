@@ -117,57 +117,71 @@ figure:not(.center){
   }
   
   /* PROFILEAREA */
-  .empty__container {
+  .profile{
 	height: 100vh;
-	background-color: #EEEEEE;
+	background-color: #161616;
 	position: relative;
+  padding: 24px;
+  color: #EEEEEE;
   }
 
-  .empty__container h1 {
+  .profile h1 {
 
 	font-family: 'Advent Pro', sans-serif;
 	font-weight: 200;
 	font-size: 82px;
-	padding: 8px;
+	padding: 8px 0;
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
-  .empty__container h2 {
+  .profile h2 {
 
 	bottom: 0;
 	font-size: 18px;
 	white-space: nowrap;
-	/* margin: 18px; */
+	margin: 18px 0;
   }
 
-  .empty__container h3 {
+  .profile h3 {
 	font-size: 14px;
 	white-space: nowrap;
 	margin-top: 18px;
 	margin-right: 18px;
   }
 
-  .empty__container p {
+  .profile p {
 	/* overflow-wrap: break-word; */
 	font-size: 12px;
 	width: 18em;
   }
 
-  .empty__container .profile__text {
+  .profile.profile__text {
 	/* display: flex; */
 	/* justify-content: center; */
 	/* align-items: center; */
 	margin: 48px 18px 72px 18px;
   }
 
-  .empty__container h3 + p {
+  .profile h3 + p {
 	margin-left: 3em;
   }
 
-  .empty__container img {
+  .profile img {
 	width: 48%;
 	display: block;
-	margin: auto;
+  margin: auto;
+  margin-top: 212px;
+  }
+
+  .profile .loopText__box {
+    display: flex;
+    width: 100vh;
+  }
+
+  .profile .loopText__item {
+    flex: 0 0 auto;
+    font-size: 40px;
+    white-space: nowrap;
   }
   
   /* GSAP ScrollTriggerエリア */
@@ -201,24 +215,15 @@ figure:not(.center){
 	bottom: 0;
   }
   
-  /* .side-scroll__item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 72vh;
-	width: 100vw;
-	overflow: hidden;
-	object-fit: cover;
-	margin-right: 64px;
 
-  } */
-  .empty__container2 {
-	background-color: #F4FF70;
+  .profile2 {
+	background-color: #161616;
 	position: relative;
 	height: 100vh;
+  color: #EEEEEE;
   }
 
-  .empty__container2 h1 {
+  .profile2 h1 {
 	font-family: 'Advent Pro', sans-serif;
 	font-weight: 400;
 	font-size: 82px;
@@ -227,7 +232,7 @@ figure:not(.center){
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
-  .empty__container2 img {
+  .profile2 img {
 	position: absolute;
 	bottom: 0;
 	left: 0;

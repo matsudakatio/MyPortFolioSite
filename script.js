@@ -1,3 +1,5 @@
+'use strict'
+
 {
   gsap.registerPlugin('ScrollTrigger');
   gsap.fromTo('.container',{scale:4},{scale:1,
