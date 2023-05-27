@@ -1,14 +1,17 @@
 /* リセットCSS */
 * {
 	margin: 0;
-	padding: 0;
+  padding: 0;
 	/* box-sizing: border-box; */
   }
+  
   
   ul,
   li {
 	list-style: none;
   }
+
+
   
   body {
 	/* display: none; */
@@ -121,16 +124,42 @@ figure:not(.center){
 	height: 100vh;
 	background-color: #161616;
 	position: relative;
-  padding: 24px;
+  /* padding: 24px; */
   color: #EEEEEE;
+  z-index: -100;
   }
+
+  .circle{
+    top: 0;
+    right: 50%;
+    position: absolute;
+    overflow: hidden;
+    mix-blend-mode: difference;
+    z-index: -99;
+}
+.box{
+    position: relative;
+}
+.box svg{
+    transform-origin: center;
+    transform:rotate(120deg)
+}
+
+.colorBox {
+  position: absolute;
+  left: 0;
+  width: 18%;
+  height: 100vh;
+  background: linear-gradient(skyblue, #F4FF70);
+  z-index: -100;
+}
 
   .profile h1 {
 
 	font-family: 'Advent Pro', sans-serif;
 	font-weight: 200;
 	font-size: 82px;
-	padding: 8px 0;
+	padding: 8px 24px;
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
@@ -139,20 +168,23 @@ figure:not(.center){
 	bottom: 0;
 	font-size: 18px;
 	white-space: nowrap;
-	margin: 18px 0;
+  margin: 18px 0;
+  padding: 24px;
   }
 
   .profile h3 {
 	font-size: 14px;
 	white-space: nowrap;
 	margin-top: 18px;
-	margin-right: 18px;
+  margin-right: 18px;
+  padding: 24px;
   }
 
   .profile p {
 	/* overflow-wrap: break-word; */
 	font-size: 12px;
-	width: 18em;
+  width: 18em;
+  padding: 24px;
   }
 
   .profile.profile__text {
@@ -167,10 +199,13 @@ figure:not(.center){
   }
 
   .profile img {
-	width: 48%;
+	width: 42%;
 	display: block;
-  margin: auto;
-  margin-top: 212px;
+  /* margin: auto; */
+  position: absolute;
+  bottom: 0;
+  z-index: -100;
+  padding: 24px;
   }
 
   .profile .loopText__box {
@@ -214,30 +249,7 @@ figure:not(.center){
 	position: fixed;
 	bottom: 0;
   }
-  
 
-  .profile2 {
-	background-color: #161616;
-	position: relative;
-	height: 100vh;
-  color: #EEEEEE;
-  }
-
-  .profile2 h1 {
-	font-family: 'Advent Pro', sans-serif;
-	font-weight: 400;
-	font-size: 82px;
-	padding: 8px;
-	/* display: block; */
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  .profile2 img {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 64%;
-}
 
 footer {
 	width: 100%;

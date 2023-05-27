@@ -26,12 +26,16 @@
   <script src="./script.js" defer></script>
   <script type="text/javascript" src="index.js" defer></script>
   <script src="./profile.js" defer></script>
-
+  <script src="./page-count.js" defer></script>
   <title>MATSUDA KAITO | official website</title>
 
 </head>
 
-<body>
+
+
+<body id="body">
+
+
 
   <h2 class="common__title">
     MATSUDA
@@ -57,6 +61,24 @@
 
   <section id="profile" class="profile">
     <div class="empty__container common__container">
+
+      <main class="circle">
+        <div class="box">
+            <svg width="300" height="300">
+                <!-- グラデーションの定義 -->
+                <defs>
+                    <linearGradient id="paint">
+                    <stop offset="0%" stop-color="skyblue"/>
+                    <stop offset="100%" stop-color="#F4FF70"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="150" cy="150" r="144" fill="none" stroke="url(#paint)" stroke-width="4" />
+            </svg>
+        </div>
+      </main>
+
+      <div class="colorBox"></div>
+
       <h1 id="fadeUpText">Profile</h1>
 
       <div class="profile__text">
@@ -79,33 +101,16 @@
         <p>
           <br>
           <br>
-          <span id="ityped"></span>
+          <span id="profileText"></span>
+
         </p>
       </div>
 
-      <div class="profileImgArea">
+
         <img id="profileImg" src="./image/main.JPG" alt="">
-        <div class="loopText">
-          <div class="loopText__box">
-            <p class="loopText__item">MATSUDA KAITO</p>
-            <p class="loopText__item">MATSUDA KAITO</p>
-            <p class="loopText__item">MATSUDA KAITO</p>
-            <p class="loopText__item">MATSUDA KAITO</p>
-          </div>  
-        </div>
-      </div>
 
 
 
-
-    </div>
-  </section>
-
-  <section id="profile2" class="profile2">
-    <div class="empty__container2 common__container">
-      <h1>TXTXT</h1>
-
-      <img src="./image/DSCF0019.JPG" alt="">
 
 
     </div>

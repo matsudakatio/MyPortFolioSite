@@ -9,7 +9,7 @@
         threshold: 0.1,
     }
 
-    const callback = (entries) => {
+    const callback = (entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 gsap.to(".char", {
@@ -21,7 +21,8 @@
                 })
 
                 gsap.to("#profileImg", {
-                    skewX:8,
+                    // scale: 1.1,
+                    opcaity: 0,
                     duration: .3, 
                     delay: .5,
                     ease: "power2.out",
@@ -38,36 +39,19 @@
                 
 
                 
-                ityped.init(document.querySelector("#ityped"), {
+                ityped.init(document.querySelector("#profileText"), {
                     strings: [
                         `
-                        Loading.../
-                        `,
-                        `
-                        自己紹介.txt
-                        `,
-                        `
-                        textテキストtexttextテキストtexttextテキスト
-                        texttextテキストtexttextテキス
-                
-                        textテキストtexttextテキストtext
-                
-                
-                        texttextテキストtexttextテキス
-                
-                        textテキストtexttextテキストtexttex
-                
-                        texttextテキストtexttextテキス
-                        textテキストtexttextテキストtexttextテキスト
-                
-                
-                        texttextテキストtexttextテキス
+                        textテキストtexttextテキストtexttextテキストtexttextテキストtexttextテキtextテキストtexttextテキストtexttexttextテキストtexttextテキスtextテキストtexttextテキストtexttextexttextテキストtexttextテキtextテキストtexttextテキストtexttextテキストtexttextテキストtexttextテキス
                         `
                     ],
-                    typeSpeed: 12,
+                    typeSpeed: 32,
                     loop: false,
-                    // showCursor: true,
+                    showCursor: false,
+                    
                 })
+
+                observer.unobserve(entry.target);
 
                 
             }
