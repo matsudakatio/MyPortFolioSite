@@ -4,6 +4,9 @@
   padding: 0;
 	/* box-sizing: border-box; */
   }
+  a {
+    text-decoration: none;
+  }
   
   
   ul,
@@ -16,12 +19,13 @@
   body {
 	/* display: none; */
 	position: relative;
-	background-color: #161616;
-	/* border: 1px solid red; */
-	color: #161616;
 	font-family: 'Acumin Pro', sans-serif;
-	padding-bottom: 100px;
-  }
+  padding-bottom: 100px;
+  
+  background:linear-gradient(24deg, #00f260, #0575e6);
+  background-size: 100% 200%;
+  animation: bg 5s ease infinite;
+}
 
 
 
@@ -37,19 +41,19 @@ main {
     max-width: 1024px;
     width: 100%;
     height: 100vh;
-	padding-bottom: 32px;
+	padding-bottom: 48px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(5,1fr);
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 main img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 figure:nth-of-type(1){
     grid-column: 3/5;
@@ -111,27 +115,43 @@ figure:not(.center){
   .common__title {
 	font-size: 88px;
 	font-family: 'Advent Pro', sans-serif;
-	line-height: 1;
+  line-height: 1;
+  display: block;
+  margin: auto 0;
 	position: absolute;
 	z-index: 100;
 	mix-blend-mode: difference;
-	color: #EEEEEE;
-
+	color: #0575e6;
   }
   
   /* PROFILEAREA */
   .profile{
 	height: 100vh;
-	background-color: #161616;
+	/* background-color: #161616; */
 	position: relative;
   /* padding: 24px; */
   color: #EEEEEE;
   z-index: -100;
+  /* background:linear-gradient(24deg, #005c97, #363795);
+  background-size: 100% 200%;
+  animation: bg 5s ease infinite; */
   }
 
+  @keyframes bg{
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
   .circle{
-    top: 0;
-    right: 50%;
     position: absolute;
     overflow: hidden;
     mix-blend-mode: difference;
@@ -150,7 +170,7 @@ figure:not(.center){
   left: 0;
   width: 18%;
   height: 100vh;
-  background: linear-gradient(skyblue, #F4FF70);
+  background: linear-gradient(black, yellow);
   z-index: -100;
 }
 
@@ -178,6 +198,7 @@ figure:not(.center){
 	margin-top: 18px;
   margin-right: 18px;
   padding: 24px;
+  visibility: hidden;
   }
 
   .profile p {
@@ -218,6 +239,7 @@ figure:not(.center){
     font-size: 40px;
     white-space: nowrap;
   }
+
   
   /* GSAP ScrollTriggerエリア */
   .side-scroll__section {
@@ -307,16 +329,23 @@ footer .snsArea {
 @media (min-width: 830px) {
 
 	.container{
-		max-width: 1024px;
+		/* max-width: 1024px; */
 		width: 100%;
-		height: 100vh;
+    height: 200vh;
 		padding-bottom: 32px;
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(4,1fr);
-		grid-template-rows: repeat(6,1fr);
-		gap: 30px;
-	}
+		grid-template-rows: repeat(5,1fr);
+		/* gap: 30px; */
+  }
+  
+  main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 5px; */
+}
 
 
     figure:nth-of-type(1){
@@ -354,9 +383,35 @@ footer .snsArea {
     
     figure:not(.center){
         opacity: 0;
+        width: 100%;
+        height: 100%;
         visibility: hidden;
     }
+
+    .profile h1 {
+      text-align: center;
+    }
+    
+    .plofile h2 {
+      font-size: 52px;
+    }
+    
+    .plofile h3 {
+      font-size: 48px;
+    }
+    
+    .profile .profile__text {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .profile img {
+      width: 12%;
+      bottom: 198px;
+    }
 }
+
+
 
 .ityped-cursor {
     font-size: 1em;

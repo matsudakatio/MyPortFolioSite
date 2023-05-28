@@ -15,26 +15,35 @@
                 gsap.to(".char", {
                   y: 0,
                   stagger: 0.05,
-                  delay: 0.1,
+                  delay: 0.2,
                   duration: 0.4,
                   ease: "power2.out",
                 })
-
-                gsap.to("#profileImg", {
-                    // scale: 1.1,
-                    opcaity: 0,
-                    duration: .3, 
-                    delay: .5,
-                    ease: "power2.out",
-                })
-
 
                 ityped.init(document.querySelector("#myname"), {
                     strings: [
                         `Matsuda Kaito`
                     ], 
                     loop:false,
+                    typeSpeed: 32,
                     showCursor: false,
+                    startDelay: 2000,
+                })
+
+                gsap.from("#katagaki", {
+                    y: 8,
+                    duration: .4,
+                    autoAlpha: 0,
+                    delay: 2.2,
+                    ease: "power2.out",
+                  })
+
+                gsap.from("#profileImg", {
+                    // scale: 1.1,
+                    autoAlpha: 0,
+                    duration: .3, 
+                    delay: 3,
+                    ease: "power2.out",
                 })
                 
 
@@ -48,6 +57,7 @@
                     typeSpeed: 32,
                     loop: false,
                     showCursor: false,
+                    startDelay: 2400,
                     
                 })
 
